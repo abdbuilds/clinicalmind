@@ -1,0 +1,38 @@
+schema: spec-driven
+
+context: |
+  Project: ClinicalMind — a HIPAA-ready clinical AI agent on AWS Bedrock.
+  It answers medical questions grounded in synthetic FHIR R4 patient data
+  and clinical guideline documents, always citing sources.
+
+  Tech stack: AWS Bedrock (foundation models, Knowledge Bases/RAG, Agents,
+  Guardrails), AWS Lambda (Python) for agent tools, AWS CDK (TypeScript) for
+  infrastructure, AWS Glue + Athena for FHIR->Parquet ETL and analytics (Month 3),
+  Synthea for synthetic patient data. Region us-east-1. Model: Claude Haiku.
+
+  Domain: healthcare. All patient data is synthetic (Synthea) — never real PHI.
+  Guardrails mask PHI. Answers must be traceable to a cited source, never fabricated.
+
+  Conventions: conventional commit messages; one course "day" = one committed result;
+  least-privilege IAM; secrets only in .env (git-ignored), never hardcoded.
+
+  This is a learning project following CLINICALMIND_MASTER.md at the repo root.
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours

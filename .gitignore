@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Node / CDK
+node_modules/
+dist/
+cdk.out/
+*.tsbuildinfo
+
+# Secrets & env
+.env
+.env.local
+*.pem
+
+# Synthea / large generated data (keep only committed samples)
+*.jar
+data/sample/*
+!data/sample/.gitkeep
+synthea/
+output/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/

@@ -53,13 +53,14 @@ Non-Claude options on Bedrock: Amazon **Nova/Titan**, Meta **Llama** — same id
    (No sidebar? Click the ☰ menu top-left of the Bedrock page.)
 
 ### 4. Open Claude Haiku in the playground
-5. Find **Claude 3 Haiku** (Anthropic) → click **Open in playground** (or **View model** → open in playground).
+5. Find **Claude Haiku 4.5** (Anthropic) → click **Open in playground** (or **View model** → open in playground).
+   ⚠️ Do **not** pick "Claude 3 Haiku" — it is now Legacy and errors for new users (see Gotchas).
 6. If a one-time **use-case form** appears (Anthropic, first-time only), fill it simply:
    *"Learning project — clinical Q&A prototype using synthetic data."* → submit.
    The model auto-enables on your first invocation — there is no separate "enable" step or "Access granted" status anymore.
 
 ### 5. Test in the playground
-7. In the Chat playground with **Claude 3 Haiku** selected, send:
+7. In the Chat playground with **Claude Haiku 4.5** selected, send:
    *"What is FHIR R4 and why does it matter in healthcare?"*
 8. Read the answer. Note the **input tokens**, **output tokens**, and **latency** shown near the response.
 
@@ -87,3 +88,10 @@ _Record anything that differed from the plan, with a date._
   one-time Anthropic use-case form if prompted → invoke. Steps 3–5 above were
   rewritten to match. Marketplace-served models need one invocation by a user
   with AWS Marketplace permissions to enable account-wide.
+- **2026-07-24 — "Claude 3 Haiku" is now Legacy.** Selecting it throws
+  `ResourceNotFoundException: This Model is marked by provider as Legacy and
+  you have not been actively using the model in the last 30 days.`
+  **Fix:** use **Claude Haiku 4.5** (`anthropic.claude-haiku-4-5`) instead — the
+  current cheapest Claude and a drop-in replacement for the whole course.
+  Pricing $1 / $5 per 1M in/out (was $0.25 / $1.25 for Haiku 3); still pennies
+  for learning. Verified working in the playground 2026-07-24.

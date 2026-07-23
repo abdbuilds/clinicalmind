@@ -46,38 +46,44 @@ Non-Claude options on Bedrock: Amazon **Nova/Titan**, Meta **Llama** — same id
 ### 2. Open Bedrock
 3. Top search bar → type **Bedrock** → click **Amazon Bedrock**.
 
-### 3. Go to Model access
-4. Left sidebar → scroll to the bottom → under **Bedrock configurations**, click **Model access**.
+### 3. Open the Model catalog
+> ⚠️ **The old "Model access" page was RETIRED (seen 2026-07-24).** You no longer manually enable models — serverless models auto-enable on first use. See Gotchas below.
+
+4. Left sidebar → **Model catalog** (under Foundation models).
    (No sidebar? Click the ☰ menu top-left of the Bedrock page.)
 
-### 4. Enable Claude Haiku
-5. Click **Modify model access** (or **Enable specific models** on first use).
-6. Find **Anthropic** → tick **Claude 3 Haiku** (may just say **Claude Haiku**).
-7. Click **Next**.
-8. If a **use-case form** appears, fill it simply: *"Learning project — clinical Q&A prototype using synthetic data."* Submit.
-9. Click **Submit** / **Save changes**.
+### 4. Open Claude Haiku in the playground
+5. Find **Claude 3 Haiku** (Anthropic) → click **Open in playground** (or **View model** → open in playground).
+6. If a one-time **use-case form** appears (Anthropic, first-time only), fill it simply:
+   *"Learning project — clinical Q&A prototype using synthetic data."* → submit.
+   The model auto-enables on your first invocation — there is no separate "enable" step or "Access granted" status anymore.
 
-### 5. Wait for access
-10. Back on the Model access list, Claude Haiku status becomes **Access granted** (usually instant, can take a few minutes).
-
-### 6. Test in the playground
-11. Left sidebar → **Playgrounds** → **Chat** (or **Chat / Text**).
-12. Select model → **Anthropic** → **Claude 3 Haiku**.
-13. Send: *"What is FHIR R4 and why does it matter in healthcare?"*
-14. Read the answer. Note the **input tokens**, **output tokens**, and **latency** shown near the response.
+### 5. Test in the playground
+7. In the Chat playground with **Claude 3 Haiku** selected, send:
+   *"What is FHIR R4 and why does it matter in healthcare?"*
+8. Read the answer. Note the **input tokens**, **output tokens**, and **latency** shown near the response.
 
 ---
 
 ## Verify it worked
 
-- [ ] Claude Haiku shows **Access granted** in Model access
 - [ ] The playground returns a coherent answer to the FHIR question
 - [ ] You can say, in your own words, the difference between input and output tokens
+
+_(The old "Access granted" check is gone — the Model access page was retired.)_
 
 ---
 
 ## ⚠️ Gotchas & Deviations
 
-_Record anything that differed from the plan, with a date. Empty is fine._
+_Record anything that differed from the plan, with a date._
 
-- _(none yet — will fill in during execution if AWS's screens differ or an extra step is needed)_
+- **2026-07-24 — "Model access" page retired by AWS.** The console now shows:
+  *"Model access page has been retired. Serverless foundation models are now
+  automatically enabled across all AWS commercial regions when first invoked...
+  for Anthropic models, first-time users may need to submit use case details."*
+  **Impact:** no more manual enable / "Modify model access" / "Access granted".
+  **New flow:** Model catalog → open Claude Haiku in playground → fill the
+  one-time Anthropic use-case form if prompted → invoke. Steps 3–5 above were
+  rewritten to match. Marketplace-served models need one invocation by a user
+  with AWS Marketplace permissions to enable account-wide.

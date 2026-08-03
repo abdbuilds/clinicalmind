@@ -1,0 +1,17 @@
+{
+  "name": "clinicalmind-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ClinicalMind standalone Bedrock scripts (TypeScript)",
+  "scripts": {
+    "hello:ts": "tsx scripts/hello_bedrock.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1101.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.5",
+    "typescript": "^7.0.2"
+  }
+}

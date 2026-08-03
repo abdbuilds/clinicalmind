@@ -25,3 +25,4 @@ finish without re-figuring anything out.
 ## Index
 
 - [day-02-explore-bedrock-console.md](day-02-explore-bedrock-console.md) — enable Claude Haiku, use the Bedrock playground
+- [day-03-first-bedrock-call-python.md](day-03-first-bedrock-call-python.md) — first Bedrock API call in Python (boto3)

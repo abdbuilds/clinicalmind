@@ -28,4 +28,5 @@ finish without re-figuring anything out.
 - [day-03-first-bedrock-call-python.md](day-03-first-bedrock-call-python.md) — first Bedrock API call in Python (boto3)
 - [day-04-first-bedrock-call-typescript.md](day-04-first-bedrock-call-typescript.md) — first Bedrock API call in TypeScript (AWS SDK v3, tsx) — _historical; project is Python-only from Day 5_
 - [day-05-compare-anthropic-vs-bedrock.md](day-05-compare-anthropic-vs-bedrock.md) — Anthropic API vs Bedrock; decision in ARCHITECTURE.md
+- [day-06-synthea-mongodb.md](day-06-synthea-mongodb.md) — generate FHIR patients with Synthea → bulk-load MongoDB
 - [sidequest-sso-multi-account.md](sidequest-sso-multi-account.md) — IAM Identity Center (SSO) + Dev/Prod multi-account

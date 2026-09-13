@@ -20,6 +20,7 @@ cdk.out/
 *.jar
 data/sample/*
 !data/sample/.gitkeep
+!data/sample/sample_*.json
 synthea/
 output/
 
